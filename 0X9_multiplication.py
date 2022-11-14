@@ -15,25 +15,32 @@ def main():
     print("")
 
     # initializing num1
-    num1 = 0
+    num1 = 0;
 
     # initializing num2
-    num2 = 0
+    num2 = 0;
 
     start = input("Enter Y to start program: ")
 
     # starting do while loop
-    while True:
+    while start == "Y":
         # calculating product
         product = num1 * num2
+
         # displaying to user
-        print(("{} X").format(num1)(" {} ").format(num2)("= {}").format(product))
+        print(("{} X {} = {}").format(num1, num2, product))
+
         # updating counters
         if num2 < 9:
             num2 = num2 + 1
         else:
             num2 = 0
             num1 = num1 + 1
+
         # checking if program should end
-        if num1 <= 9:
+        if num1 >= 9:
             break
+
+if __name__ == "__main__":
+    main()
+
